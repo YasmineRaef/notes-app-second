@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
+import 'package:notes_app_2/presentation/views/notes_list_view.dart';
 
 class NotesView extends StatelessWidget {
   const NotesView({super.key});
@@ -26,7 +27,7 @@ class NotesView extends StatelessWidget {
                 height: 50,
                 width: 50,
                 decoration: BoxDecoration(
-                  color: Colors.teal.withOpacity(0.25),
+                  color: Colors.blue.withOpacity(0.5),
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: const Center(
@@ -35,6 +36,7 @@ class NotesView extends StatelessWidget {
               ),
             ],
           ),
+          const Expanded(child: NotesListView()),
         ],
       ),
     ));
