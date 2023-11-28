@@ -10,44 +10,35 @@ class NotesView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            showModalBottomSheet(
-                shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(16)),
-                context: context,
-                builder: (context) {
-                  return const Padding(
-                      padding: EdgeInsets.all(16), child: BottomSheetView());
-                });
-          },
-          child: const Icon(Icons.add, size: 35),
-        ),
+            onPressed: () {
+              showModalBottomSheet(
+                  shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16)),
+                  context: context,
+                  builder: (context) {
+                    return const Padding(
+                        padding: EdgeInsets.all(16), child: BottomSheetView());
+                  });
+            },
+            child: const Icon(Icons.add, size: 35)),
         body: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-          child: Column(
-            children: [
+            padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+            child: Column(children: [
               const Gap(70),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  const Text("My Notes App",
-                      style:
-                          TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
-                  Container(
-                      height: 50,
-                      width: 50,
-                      decoration: BoxDecoration(
-                          color: const Color.fromRGBO(33, 150, 243, 0.5),
-                          borderRadius: BorderRadius.circular(16)),
-                      child: const Center(
-                        child: Icon(Icons.search),
-                      ))
-                ],
-              ),
-              const Expanded(child: NotesListView()),
-            ],
-          ),
-        ));
+              Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+                const Text("My Notes App",
+                    style:
+                        TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
+                Container(
+                    height: 50,
+                    width: 50,
+                    decoration: BoxDecoration(
+                        color: const Color.fromRGBO(33, 150, 243, 0.5),
+                        borderRadius: BorderRadius.circular(16)),
+                    child: const Center(child: Icon(Icons.search)))
+              ]),
+              const Expanded(child: NotesListView())
+            ])));
   }
 }
 

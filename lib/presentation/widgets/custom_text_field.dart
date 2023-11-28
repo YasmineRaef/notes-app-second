@@ -8,22 +8,18 @@ class CustomTextField extends StatelessWidget {
   final int maxLines;
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        const Gap(24),
-        TextField(
+    return Column(children: [
+      const Gap(24),
+      TextField(
           cursorColor: Colors.tealAccent,
           maxLines: maxLines,
           decoration: InputDecoration(
-            hintText: hint,
-            hintStyle: const TextStyle(color: Colors.tealAccent),
-            border: buildBorder(),
-            enabledBorder: buildBorder(),
-            focusedBorder: buildBorder(Colors.tealAccent),
-          ),
-        ),
-      ],
-    );
+              hintText: hint,
+              hintStyle: const TextStyle(color: Colors.tealAccent),
+              border: buildBorder(),
+              enabledBorder: buildBorder(),
+              focusedBorder: buildBorder(Colors.tealAccent)))
+    ]);
   }
 }
 
