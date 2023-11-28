@@ -9,28 +9,18 @@ class BottomSheetView extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       children: [
-        const CustomTextField(
-          hint: "Title",
-        ),
-        const CustomTextField(
-          hint: "Content",
-          maxLines: 5,
-        ),
+        const CustomTextField(hint: "Title"),
+        const CustomTextField(hint: "Content", maxLines: 5),
         const Gap(50),
         Container(
           width: MediaQuery.of(context).size.width,
           height: 55,
           decoration: BoxDecoration(
-            color: Colors.blueGrey,
-            borderRadius: BorderRadius.circular(16),
-          ),
+              color: Colors.blueGrey, borderRadius: BorderRadius.circular(16)),
           child: const Center(
             child: Text(
               "Add",
-              style: TextStyle(
-                fontWeight: FontWeight.bold,
-                fontSize: 15,
-              ),
+              style: TextStyle(fontWeight: FontWeight.bold, fontSize: 15),
             ),
           ),
         ),
