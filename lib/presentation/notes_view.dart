@@ -32,9 +32,9 @@ class NotesView extends StatelessWidget {
                 Container(
                     height: 50,
                     width: 50,
-                    color: const Color.fromRGBO(33, 150, 243, 0.5),
-                    decoration:
-                        BoxDecoration(borderRadius: BorderRadius.circular(16)),
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(16),
+                        color: const Color.fromRGBO(33, 150, 243, 0.5)),
                     child: const Center(child: Icon(Icons.search)))
               ]),
               const Expanded(child: NotesListView())
