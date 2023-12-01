@@ -18,23 +18,28 @@ class NoteCard extends StatelessWidget {
               color: Colors.teal, borderRadius: BorderRadius.circular(16)),
           child: Column(crossAxisAlignment: CrossAxisAlignment.end, children: [
             ListTile(
-              title: const Text("Note 1",
-                  style: TextStyle(
-                    fontSize: 30,
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                  )),
+              title: Text("Note 1",
+                  style: Theme.of(context)
+                      .textTheme
+                      .labelLarge
+                      ?.copyWith(fontSize: 25, color: Colors.black)),
               subtitle: Padding(
                   padding: const EdgeInsets.only(top: 8),
                   child: Text("Yasmine Raef Mohamed Mohamed El-Sayed",
-                      style: TextStyle(color: Colors.black.withOpacity(0.5)))),
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                          color: const Color.fromRGBO(0, 0, 0, 0.5)))),
               trailing: IconButton(
                   onPressed: () {},
                   icon:
                       const Icon(Icons.delete, size: 30, color: Colors.black)),
             ),
-            Text("Jan 01 , 2004",
-                style: TextStyle(color: Colors.black.withOpacity(.5)))
+            Text(
+              "01 JAN 2004",
+              style: Theme.of(context)
+                  .textTheme
+                  .labelSmall
+                  ?.copyWith(color: const Color.fromRGBO(0, 0, 0, 0.5)),
+            )
           ])),
     );
   }

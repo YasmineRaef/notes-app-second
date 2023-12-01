@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
-import 'package:notes_app_2/presentation/widgets/custom_text_field.dart';
+import 'package:notes_app_2/presentation/views/bottom_sheet.dart';
 
 class EditNote extends StatelessWidget {
   const EditNote({super.key});
@@ -13,9 +13,7 @@ class EditNote extends StatelessWidget {
             child: Column(children: [
               const Gap(70),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                const Text("Edit",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
+                Text("Edit", style: Theme.of(context).textTheme.labelLarge),
                 Container(
                     height: 50,
                     width: 50,
@@ -24,8 +22,7 @@ class EditNote extends StatelessWidget {
                         color: const Color.fromRGBO(33, 150, 243, 0.5)),
                     child: const Center(child: Icon(Icons.edit)))
               ]),
-              const CustomTextField(hint: "Title"),
-              const CustomTextField(hint: "Content", maxLines: 5),
+              const TextFields(),
             ])));
   }
 }

@@ -26,9 +26,8 @@ class NotesView extends StatelessWidget {
             child: Column(children: [
               const Gap(70),
               Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                const Text("My Notes App",
-                    style:
-                        TextStyle(fontWeight: FontWeight.bold, fontSize: 28)),
+                Text("My Notes App",
+                    style: Theme.of(context).textTheme.labelLarge),
                 Container(
                     height: 50,
                     width: 50,
