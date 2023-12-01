@@ -13,8 +13,8 @@ class BottomSheetView extends StatelessWidget {
         const CustomTextField(hint: "Content", maxLines: 5),
         const Gap(50),
         Container(
-            width: MediaQuery.of(context).size.width,
             height: 55,
+            width: MediaQuery.of(context).size.width,
             decoration: BoxDecoration(
                 color: Colors.blueGrey,
                 borderRadius: BorderRadius.circular(16)),

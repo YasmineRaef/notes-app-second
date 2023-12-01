@@ -13,9 +13,10 @@ class NoteCard extends StatelessWidget {
           ListTile(
             title: const Text("Note 1",
                 style: TextStyle(
-                    color: Colors.black,
-                    fontWeight: FontWeight.bold,
-                    fontSize: 20)),
+                  fontSize: 30,
+                  color: Colors.black,
+                  fontWeight: FontWeight.bold,
+                )),
             subtitle: Padding(
                 padding: const EdgeInsets.only(top: 8),
                 child: Text("Yasmine Raef Mohamed Mohamed El-Sayed",

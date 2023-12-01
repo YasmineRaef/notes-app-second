@@ -11,8 +11,8 @@ class CustomTextField extends StatelessWidget {
     return Column(children: [
       const Gap(24),
       TextField(
-          cursorColor: Colors.tealAccent,
           maxLines: maxLines,
+          cursorColor: Colors.tealAccent,
           decoration: InputDecoration(
               hintText: hint,
               hintStyle: const TextStyle(color: Colors.tealAccent),
@@ -23,8 +23,6 @@ class CustomTextField extends StatelessWidget {
   }
 }
 
-OutlineInputBorder buildBorder([color]) {
-  return OutlineInputBorder(
-      borderRadius: BorderRadius.circular(8),
-      borderSide: BorderSide(color: color ?? Colors.white));
-}
+OutlineInputBorder buildBorder([color]) => OutlineInputBorder(
+    borderRadius: BorderRadius.circular(8),
+    borderSide: BorderSide(color: color ?? Colors.white));

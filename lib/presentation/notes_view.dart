@@ -12,9 +12,9 @@ class NotesView extends StatelessWidget {
         floatingActionButton: FloatingActionButton(
             onPressed: () {
               showModalBottomSheet(
+                  context: context,
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(16)),
-                  context: context,
                   builder: (context) {
                     return const Padding(
                         padding: EdgeInsets.all(16), child: BottomSheetView());
@@ -32,9 +32,9 @@ class NotesView extends StatelessWidget {
                 Container(
                     height: 50,
                     width: 50,
-                    decoration: BoxDecoration(
-                        color: const Color.fromRGBO(33, 150, 243, 0.5),
-                        borderRadius: BorderRadius.circular(16)),
+                    color: const Color.fromRGBO(33, 150, 243, 0.5),
+                    decoration:
+                        BoxDecoration(borderRadius: BorderRadius.circular(16)),
                     child: const Center(child: Icon(Icons.search)))
               ]),
               const Expanded(child: NotesListView())
