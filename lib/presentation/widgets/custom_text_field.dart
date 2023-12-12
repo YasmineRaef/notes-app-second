@@ -26,10 +26,10 @@ class CustomTextField extends StatelessWidget {
           cursorColor: Colors.tealAccent,
           decoration: InputDecoration(
               hintText: hint,
-              hintStyle: const TextStyle(color: Colors.tealAccent),
               border: buildBorder(),
               enabledBorder: buildBorder(),
-              focusedBorder: buildBorder(Colors.tealAccent)))
+              focusedBorder: buildBorder(Colors.tealAccent),
+              hintStyle: const TextStyle(color: Colors.tealAccent)))
     ]);
   }
 }

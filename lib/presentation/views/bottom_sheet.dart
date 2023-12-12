@@ -26,33 +26,29 @@ class _AddNoteFormState extends State<AddNoteForm> {
   @override
   Widget build(BuildContext context) {
     return Form(
-      key: formKey,
-      child: Column(
-        children: [
+        key: formKey,
+        child: Column(children: [
           const TextFields(),
           const Gap(30),
           GestureDetector(
-            onTap: () {
-              if (formKey.currentState!.validate()) {
-                formKey.currentState!.save();
-              } else {
-                autovalidateMode = AutovalidateMode.always;
-                setState(() {});
-              }
-            },
-            child: Container(
-                height: 55,
-                width: MediaQuery.of(context).size.width,
-                decoration: BoxDecoration(
-                    color: Colors.blueGrey,
-                    borderRadius: BorderRadius.circular(16)),
-                child: Center(
-                    child: Text("Add",
-                        style: Theme.of(context).textTheme.labelMedium))),
-          )
-        ],
-      ),
-    );
+              onTap: () {
+                if (formKey.currentState!.validate()) {
+                  formKey.currentState!.save();
+                } else {
+                  autovalidateMode = AutovalidateMode.always;
+                  setState(() {});
+                }
+              },
+              child: Container(
+                  height: 55,
+                  width: MediaQuery.of(context).size.width,
+                  decoration: BoxDecoration(
+                      color: Colors.blueGrey,
+                      borderRadius: BorderRadius.circular(16)),
+                  child: Center(
+                      child: Text("Add",
+                          style: Theme.of(context).textTheme.labelMedium))))
+        ]));
   }
 }
 
@@ -68,20 +64,18 @@ class _TextFieldsState extends State<TextFields> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: [
-        CustomTextField(
-            hint: "Title",
-            onSaved: (value) {
-              title = value;
-            }),
-        CustomTextField(
-            maxLines: 5,
-            hint: "Content",
-            onSaved: (value) {
-              subtitle = value;
-            }),
-      ],
-    );
+    return Column(children: [
+      CustomTextField(
+          hint: "Title",
+          onSaved: (value) {
+            title = value;
+          }),
+      CustomTextField(
+          maxLines: 5,
+          hint: "Content",
+          onSaved: (value) {
+            subtitle = value;
+          })
+    ]);
   }
 }
